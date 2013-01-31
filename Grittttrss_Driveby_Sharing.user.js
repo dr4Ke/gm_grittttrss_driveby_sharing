@@ -25,17 +25,32 @@ if (self == top) {
 
     //--- Style our newly added elements using CSS.
     GM_addStyle ( " #grittttrssDiv { \
-            position:               fixed;\
-            bottom:                    0;\
-            right:                   0;\
-            font-size:              20px;\
-            margin:                 5px;\
-            opacity:                0.6;\
-            z-index:                222;\
-            padding:                5px 5px;\
+            color: rgb(34, 34, 34); \
+            font-family: arial,sans-serif; \
+            font-size: 20px; \
+            margin-bottom: 5px; \
+            margin-left: 5px; \
+            margin-right: 5px; \
+            margin-top: 5px; \
+            padding-bottom: 5px; \
+            padding-left: 5px; \
+            padding-right: 5px; \
+            padding-top: 5px; \
+            position: fixed; \
+            bottom: 0;\
+            right: 0;\
+            width: auto;\
+            z-index: 222;\
         }\
         #grittttrssButton {\
             cursor:                 pointer;\
+            opacity:                0.3;\
+            font-family: sans-serif; \
+            font-size: 15px; \
+        }\
+        #grittttrssButton:hover {\
+            opacity:                1;\
+            color:                  green;\
         }\
         #grittttrssDiv p {\
             color:                  red;\
