@@ -7,7 +7,7 @@
 // @grant       GM_addStyle
 // @grant       GM_setValue
 // @grant       GM_getValue
-// @version     1
+// @version     2
 // ==/UserScript==
 
 
