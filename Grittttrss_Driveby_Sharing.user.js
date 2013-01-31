@@ -112,6 +112,4 @@ function ButtonClickAction (zEvent)
                    document.getElementsByTagName('head')[0].appendChild(tt_script);
                    document.getElementById("grittttrssDiv").style.display="none";
                },1000);
-    
- //  GM_setValue('counter', ++counter);
 }
