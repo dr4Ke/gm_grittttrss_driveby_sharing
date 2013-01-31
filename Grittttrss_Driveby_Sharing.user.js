@@ -16,12 +16,13 @@ if (self == top) {
     */
     var zNode       = document.createElement ('div');
     zNode.innerHTML = '<button id="grittttrssButton" type="button">Add this page to your tt-rss shared items</button>';
+    zNode.innerHTML += '<button id="grittttrssButtonCancel" type="button">✗</button>';
     zNode.setAttribute ('id', 'grittttrssDiv');
     document.body.appendChild (zNode);
 
     //--- Activate the newly added button.
     document.getElementById ("grittttrssButton").addEventListener ("click", ButtonClickAction, false);
-    addEventListener("keypress",    function(e){e.keyCode==27 &&(document.getElementById("grittttrssDiv").style.display="none")},false);
+    document.getElementById ("grittttrssButtonCancel").addEventListener ("click", disableGritttt, false);
 
     //--- Style our newly added elements using CSS.
     GM_addStyle ( " #grittttrssDiv { \
@@ -52,6 +53,20 @@ if (self == top) {
             opacity:                1;\
             color:                  green;\
         }\
+        #grittttrssButtonCancel {\
+            cursor: pointer;\
+            opacity: 0.6;\
+            color: red;\
+            font-family: sans-serif; \
+            font-size: 15px; \
+            padding-bottom: 0px; \
+            padding-left: 0px; \
+            padding-right: 0px; \
+            padding-top: 0px; \
+        }\
+        #grittttrssButtonCancel:hover {\
+            opacity: 1;\
+        }\
         #grittttrssDiv p {\
             color:                  red;\
             background:             white;\
@@ -60,6 +75,10 @@ if (self == top) {
             background: white; \
             vertical-align: middle; \
         }" );
+}
+
+function disableGritttt () {
+    document.getElementById("grittttrssDiv").style.display="none";
 }
 
 function GetGrittttURL () {
